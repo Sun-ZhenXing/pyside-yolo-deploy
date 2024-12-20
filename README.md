@@ -1,10 +1,10 @@
 # YOLO & PySide
 
-使用 PySide6 构建 UI，部署 ONNX YOLOv10 模型，可轻量化打包，使用 ONNXRuntime 推理。
+使用 PySide6 构建 UI，部署 ONNX YOLOv11 模型，可轻量化打包，使用 ONNXRuntime 推理。
 
 ## 特征
 
-本项目为 YOLOv10 参考项目，提供了 训练、推理、导出和 ONNX 模型的部署示例。
+本项目为 YOLOv11 参考项目，提供了 训练、推理、导出和 ONNX 模型的部署示例。
 
 更多：
 
@@ -19,7 +19,7 @@
 
 ## 开始
 
-推荐环境：Python 3.11
+推荐环境：Python 3.11，使用 UV 来管理虚拟环境。
 
 ```bash
 uv sync
@@ -40,20 +40,13 @@ just dev
 格式化：
 
 ```bash
-ruff . --fix
-```
-
-或者：
-
-```bash
-isort .
-black .
+just lint
 ```
 
 测试 Git 钩子：
 
 ```bash
-pre-commit run --all-files
+just test
 ```
 
 ## 导出模型
@@ -70,13 +63,13 @@ yolo export model=/root/runs/detect/train/weights/best.pt format=onnx simplify=T
 
 ```bash
 set UPX_PATH=...
-scripts\build.bat
+just build
 ```
 
-Windows 测试打包：
+测试打包：
 
 ```bash
-scripts\build-test.bat
+just build-test
 ```
 
 ## 协议

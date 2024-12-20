@@ -18,6 +18,7 @@
   "files.eol": "\n",
   "cSpell.words": [
     "imread",
+    "isort",
     "ndarray",
     "ONNX",
     "onnxruntime",

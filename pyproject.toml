@@ -1,5 +1,5 @@
 [project]
-name = "pyside-yolov10"
+name = "pyside-yolo-ui"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -8,7 +8,7 @@ dependencies = [
     "numpy>=1.26.4",
     "onnxruntime-gpu>=1.19.2",
     "opencv-python>=4.10.0.84",
-    "pyside6>=6.8.0.2",
+    "pyside6==6.8.1",
     "torch==2.5.1+cu121",
     "torchaudio==2.5.1+cu121",
     "torchvision==0.20.1+cu121",
@@ -25,11 +25,11 @@ extra-index-url = [
 dev-dependencies = [
     "dill>=0.3.9",
     "ipykernel>=6.29.5",
-    "nuitka>=2.4.11",
+    "nuitka>=2.5.7",
     "pre-commit>=4.0.1",
-    "ruff>=0.7.1",
-    "rust-just>=1.36.0",
+    "ruff>=0.8.4",
+    "rust-just>=1.38.0",
     "tensorboard>=2.18.0",
-    "ultralytics>=8.3.25",
-    "wandb>=0.18.5",
+    "ultralytics>=8.3.51",
+    "wandb>=0.19.1",
 ]
