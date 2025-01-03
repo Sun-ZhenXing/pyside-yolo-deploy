@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>YOLOv10 目标检测</string>
+   <string>YOLOv11 目标检测</string>
   </property>
   <property name="windowIcon">
    <iconset resource="../../resources.qrc">
@@ -39,6 +39,9 @@
           </property>
           <property name="text">
            <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
           </property>
          </widget>
         </item>

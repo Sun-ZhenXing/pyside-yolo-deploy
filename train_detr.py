@@ -1,6 +1,6 @@
 import sys
 
-from ultralytics import YOLO
+from ultralytics import RTDETR
 
 
 def main():
@@ -8,11 +8,11 @@ def main():
         print("Usage: python train.py <data_path>")
         sys.exit(1)
 
-    model = YOLO("yolo11s.pt")
+    model = RTDETR("rtdetr-l.pt")
     data_path = sys.argv[1]
     results = model.train(
         data=data_path,
-        epochs=100,
+        epochs=300,
         imgsz=640,
         batch=-1,
         verbose=True,

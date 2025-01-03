@@ -30,6 +30,7 @@
     "postprocess",
     "pyproject",
     "pyside",
+    "RTDETR",
     "tensorboard",
     "torchaudio",
     "torchvision",

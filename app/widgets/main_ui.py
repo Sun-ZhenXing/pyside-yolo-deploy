@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'main.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.8.0
+## Created by: Qt User Interface Compiler version 6.8.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -125,6 +125,7 @@ class Ui_MainWindow(object):
         self.image_label.setObjectName("image_label")
         self.image_label.setMinimumSize(QSize(400, 0))
         self.image_label.setStyleSheet("background-color: #090909")
+        self.image_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.gridLayout_1.addWidget(self.image_label, 0, 0, 1, 1)
 
@@ -232,7 +233,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(
             QCoreApplication.translate(
-                "MainWindow", "YOLOv10 \u76ee\u6807\u68c0\u6d4b", None
+                "MainWindow", "YOLOv11 \u76ee\u6807\u68c0\u6d4b", None
             )
         )
         self.actionExit.setText(

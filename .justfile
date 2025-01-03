@@ -15,12 +15,6 @@ build:
 build-test:
   uv run python tools/build.py --test
 
-lint:
-  uv run ruff check
-
-lint-fix:
-  uv run ruff check --fix
-
 compile:
   uv run python tools/compile_qt.py
 
