@@ -1,5 +1,6 @@
 # Project specific
 *.pt
+*.db
 runs/
 wandb/
 temp/

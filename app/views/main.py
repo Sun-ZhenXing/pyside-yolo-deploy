@@ -11,11 +11,11 @@ from app.widgets.main_ui import Ui_MainWindow
 class MainWindow(QMainWindow):
     def __init__(
         self,
+        windows_map: dict[str, QWidget] | None = None,
         parent: QWidget | None = None,
-        views_map: dict[str, QWidget] | None = None,
     ) -> None:
         super().__init__(parent)
-        self._views_map = views_map if views_map is not None else {}
+        self._windows_map = windows_map if windows_map is not None else {}
 
         self._ui = Ui_MainWindow()
         self._ui.setupUi(self)
@@ -114,3 +114,10 @@ class MainWindow(QMainWindow):
             "关于",
             "YOLOv10 目标检测",
         )
+
+    # 关闭摄像头
+    def closeCamera(self) -> None:
+        """关闭摄像头"""
+        self._video.release()  # 释放摄像头对象
+        self._timer.stop()  # 停止计时器，不再显示图像帧
+        self._ui.image_label.clear()

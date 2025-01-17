@@ -30,7 +30,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(999, 519)
+        MainWindow.resize(1024, 800)
         icon = QIcon()
         icon.addFile(
             ":/res/assets/icon.ico", QSize(), QIcon.Mode.Normal, QIcon.State.Off
@@ -142,21 +142,11 @@ class Ui_MainWindow(object):
 
         self.gridLayout_3.addWidget(self.pushButton, 0, 0, 1, 1)
 
-        self.pushButton_2 = QPushButton(self.gridLayoutWidget_2)
-        self.pushButton_2.setObjectName("pushButton_2")
-
-        self.gridLayout_3.addWidget(self.pushButton_2, 1, 0, 1, 1)
-
-        self.pushButton_3 = QPushButton(self.gridLayoutWidget_2)
-        self.pushButton_3.setObjectName("pushButton_3")
-
-        self.gridLayout_3.addWidget(self.pushButton_3, 2, 0, 1, 1)
-
         self.verticalSpacer = QSpacerItem(
             20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding
         )
 
-        self.gridLayout_3.addItem(self.verticalSpacer, 4, 0, 1, 1)
+        self.gridLayout_3.addItem(self.verticalSpacer, 5, 0, 1, 1)
 
         self.groupBox = QGroupBox(self.gridLayoutWidget_2)
         self.groupBox.setObjectName("groupBox")
@@ -178,7 +168,22 @@ class Ui_MainWindow(object):
 
         self.gridLayout_4.addWidget(self.label, 1, 0, 1, 1)
 
-        self.gridLayout_3.addWidget(self.groupBox, 3, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.groupBox, 4, 0, 1, 1)
+
+        self.pushButton_3 = QPushButton(self.gridLayoutWidget_2)
+        self.pushButton_3.setObjectName("pushButton_3")
+
+        self.gridLayout_3.addWidget(self.pushButton_3, 2, 0, 1, 1)
+
+        self.pushButton_2 = QPushButton(self.gridLayoutWidget_2)
+        self.pushButton_2.setObjectName("pushButton_2")
+
+        self.gridLayout_3.addWidget(self.pushButton_2, 1, 0, 1, 1)
+
+        self.pushButton_4 = QPushButton(self.gridLayoutWidget_2)
+        self.pushButton_4.setObjectName("pushButton_4")
+
+        self.gridLayout_3.addWidget(self.pushButton_4, 3, 0, 1, 1)
 
         self.gridLayout_2.addLayout(self.gridLayout_3, 0, 0, 1, 1)
 
@@ -192,7 +197,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName("menubar")
-        self.menubar.setGeometry(QRect(0, 0, 999, 33))
+        self.menubar.setGeometry(QRect(0, 0, 1024, 33))
         self.menuFile = QMenu(self.menubar)
         self.menuFile.setObjectName("menuFile")
         self.menuHelp = QMenu(self.menubar)
@@ -225,6 +230,7 @@ class Ui_MainWindow(object):
         self.pushButton.clicked.connect(MainWindow.openPicture)
         self.pushButton_2.clicked.connect(MainWindow.openVideo)
         self.pushButton_3.clicked.connect(MainWindow.openCamera)
+        self.pushButton_4.clicked.connect(MainWindow.closeCamera)
 
         QMetaObject.connectSlotsByName(MainWindow)
 
@@ -279,14 +285,6 @@ class Ui_MainWindow(object):
         self.pushButton.setText(
             QCoreApplication.translate("MainWindow", "\u6253\u5f00\u56fe\u7247", None)
         )
-        self.pushButton_2.setText(
-            QCoreApplication.translate("MainWindow", "\u6253\u5f00\u89c6\u9891", None)
-        )
-        self.pushButton_3.setText(
-            QCoreApplication.translate(
-                "MainWindow", "\u6253\u5f00\u6444\u50cf\u5934", None
-            )
-        )
         self.groupBox.setTitle(
             QCoreApplication.translate(
                 "MainWindow", "\u7f6e\u4fe1\u5ea6\u9608\u503c\uff08conf\uff09", None
@@ -295,6 +293,19 @@ class Ui_MainWindow(object):
         self.label.setText(
             QCoreApplication.translate(
                 "MainWindow", "\u5f53\u524d\u503c\uff1a0.25", None
+            )
+        )
+        self.pushButton_3.setText(
+            QCoreApplication.translate(
+                "MainWindow", "\u6253\u5f00\u6444\u50cf\u5934", None
+            )
+        )
+        self.pushButton_2.setText(
+            QCoreApplication.translate("MainWindow", "\u6253\u5f00\u89c6\u9891", None)
+        )
+        self.pushButton_4.setText(
+            QCoreApplication.translate(
+                "MainWindow", "\u5173\u95ed\u6444\u50cf\u5934", None
             )
         )
         self.menuFile.setTitle(
