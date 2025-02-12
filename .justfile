@@ -1,6 +1,9 @@
 i:
   uv sync && uv run pre-commit install
 
+update:
+  uv sync -U && uv export > requirements.txt && uv run pre-commit autoupdate
+
 export:
   uv export > requirements.txt
 
