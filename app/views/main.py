@@ -27,10 +27,21 @@ class MainWindow(QMainWindow):
         self._timer.timeout.connect(self.update_frame)
         # self._timer.start(30)
 
+        self._conf = 0.25
+        self._ui.confSlider.setValue(int(self._conf * 100))
+        self._ui.confSlider.valueChanged.connect(
+            lambda value: self.setConf(value / 100)
+        )
+
+    def setConf(self, conf: float) -> None:
+        """设置置信度"""
+        self._conf = conf
+        self._ui.confLabel.setText(f"置信度：{conf:.2f}")
+
     def update_frame(self):
         """更新帧"""
         ret, frame = self._video.read()
-        frame, *_ = predict(frame)
+        frame, *_ = predict(frame, conf=self._conf)
         if ret:
             self.display_frame(frame)
 
@@ -62,8 +73,8 @@ class MainWindow(QMainWindow):
         )
         if file_name:
             frame = cv2.imread(file_name)
-            frame, *_ = predict(frame)
-            height, width, channel = frame.shape
+            frame, *_ = predict(frame, conf=self._conf)
+            height, width, _ = frame.shape
             if height > 1280 or width > 720:
                 ratio = min(1280 / height, 720 / width)
                 frame = cv2.resize(frame, (int(width * ratio), int(height * ratio)))
@@ -104,7 +115,12 @@ class MainWindow(QMainWindow):
     @Slot()
     def actionSettingClicked(self) -> None:
         """设置"""
-        QMessageBox.information(self, "设置", "正在开发中……")
+        QMessageBox.information(
+            self,
+            "设置",
+            "正在开发中……",
+            QMessageBox.StandardButton.Ok,
+        )
 
     @Slot()
     def about(self) -> None:
@@ -112,5 +128,5 @@ class MainWindow(QMainWindow):
         QMessageBox.about(
             self,
             "关于",
-            "YOLOv10 目标检测",
+            "YOLOv11 目标检测",
         )

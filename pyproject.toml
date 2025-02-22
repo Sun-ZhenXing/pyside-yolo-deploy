@@ -9,9 +9,9 @@ dependencies = [
     "opencv-python>=4.11.0.86",
     "pyside6>=6.8.2.1",
     "qt-material>=2.14",
-    "torch==2.5.1+cu121",
-    "torchaudio==2.5.1+cu121",
-    "torchvision==0.20.1+cu121",
+    "torch==2.6.0+cu126",
+    "torchaudio==2.6.0+cu126",
+    "torchvision==0.21.0+cu126",
     "typing-extensions>=4.12.2",
 ]
 
@@ -20,15 +20,15 @@ index-strategy = "unsafe-best-match"
 index-url = "https://pypi.org/simple"
 extra-index-url = [
     "https://pypi.org/simple",
-    "https://download.pytorch.org/whl/cu121",
+    "https://download.pytorch.org/whl/cu126",
 ]
 dev-dependencies = [
     "dill>=0.3.9",
     "ipykernel>=6.29.5",
-    "nuitka>=2.6.4",
+    "nuitka>=2.6.6",
     "pre-commit>=4.1.0",
     "rust-just>=1.39.0",
-    "tensorboard>=2.18.0",
-    "ultralytics>=8.3.74",
-    "wandb>=0.19.6",
+    "tensorboard>=2.19.0",
+    "ultralytics>=8.3.78",
+    "wandb>=0.19.7",
 ]

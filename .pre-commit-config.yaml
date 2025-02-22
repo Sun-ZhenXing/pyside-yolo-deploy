@@ -3,7 +3,10 @@ fail_fast: false
 exclude: |
   (?x)^(
     .vscode/.*|
-    uv.lock
+    uv.lock|
+    app/widgets/.*|
+    resources.qrc|
+    resources_rc.py|
   )$
 repos:
   - repo: https://github.com/abravalheri/validate-pyproject
@@ -28,7 +31,7 @@ repos:
         args: [--fix=lf]
       - id: trailing-whitespace
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.9.6
+    rev: v0.9.7
     hooks:
       - id: ruff
         args: [--fix]
