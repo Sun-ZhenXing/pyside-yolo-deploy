@@ -5,7 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "onnxruntime-gpu>=1.20.1",
+    "onnxruntime-gpu>=1.21.0",
     "opencv-python>=4.11.0.86",
     "pyside6>=6.8.2.1",
     "qt-material>=2.14",
@@ -25,10 +25,10 @@ extra-index-url = [
 dev-dependencies = [
     "dill>=0.3.9",
     "ipykernel>=6.29.5",
-    "nuitka>=2.6.6",
+    "nuitka>=2.6.8",
     "pre-commit>=4.1.0",
-    "rust-just>=1.39.0",
+    "rust-just>=1.40.0",
     "tensorboard>=2.19.0",
-    "ultralytics>=8.3.78",
-    "wandb>=0.19.7",
+    "ultralytics>=8.3.88",
+    "wandb>=0.19.8",
 ]
