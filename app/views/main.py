@@ -47,6 +47,10 @@ class MainWindow(QMainWindow):
 
     def display_frame(self, frame: np.ndarray):
         """渲染帧"""
+        h, w, _ = frame.shape
+        if h > 1280 or w > 720:
+            ratio = min(1280 / h, 720 / w)
+            frame = cv2.resize(frame, (int(w * ratio), int(h * ratio)))
         image = QImage(
             frame.data,
             frame.shape[1],
