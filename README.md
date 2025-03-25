@@ -15,11 +15,17 @@
 - [ ] 文档：训练、推理、模型导出
 - [x] 文档：打包部署
 
-参考了 [X-AnyLabeling: `export_yolov10_onnx.py`](https://github.com/CVHub520/X-AnyLabeling/blob/main/tools/export_yolov10_onnx.py) 的实现。
-
 ## 开始
 
 推荐环境：Python 3.11，使用 UV 来管理虚拟环境。
+
+如果没有安装 UV，请先安装：
+
+```bash
+pip install uv
+```
+
+安装依赖：
 
 ```bash
 uv sync
