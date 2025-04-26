@@ -1,34 +1,54 @@
 [project]
 name = "pyside-yolo-ui"
 version = "0.1.0"
-description = "Add your description here"
+description = "YOLOv12 GUI for PySide6"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 dependencies = [
-    "onnxruntime-gpu>=1.21.0",
+    "onnxruntime-gpu>=1.21.1",
     "opencv-python>=4.11.0.86",
-    "pyside6>=6.8.2.1",
-    "qt-material>=2.14",
-    "torch==2.6.0+cu126",
-    "torchaudio==2.6.0+cu126",
-    "torchvision==0.21.0+cu126",
-    "typing-extensions>=4.12.2",
+    "pyside6>=6.9.0",
+    "qt-material>=2.17",
+    "torch",
+    "torchaudio",
+    "torchvision",
 ]
 
-[tool.uv]
-index-strategy = "unsafe-best-match"
-index-url = "https://pypi.org/simple"
-extra-index-url = [
-    "https://pypi.org/simple",
-    "https://download.pytorch.org/whl/cu126",
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cpu", marker = "sys_platform == 'darwin'" },
+    { index = "pytorch-cu126", marker = "sys_platform != 'darwin'" },
 ]
-dev-dependencies = [
-    "dill>=0.3.9",
+torchaudio = [
+    { index = "pytorch-cpu", marker = "sys_platform == 'darwin'" },
+    { index = "pytorch-cu126", marker = "sys_platform != 'darwin'" },
+]
+torchvision = [
+    { index = "pytorch-cpu", marker = "sys_platform == 'darwin'" },
+    { index = "pytorch-cu126", marker = "sys_platform != 'darwin'" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[[tool.uv.index]]
+name = "default"
+url = "https://pypi.org/simple"
+
+[dependency-groups]
+dev = [
     "ipykernel>=6.29.5",
-    "nuitka>=2.6.8",
+    "nuitka>=2.6.9",
     "pre-commit>=4.2.0",
     "rust-just>=1.40.0",
     "tensorboard>=2.19.0",
-    "ultralytics>=8.3.96",
-    "wandb>=0.19.8",
+    "ultralytics>=8.3.116",
+    "wandb>=0.19.10",
 ]

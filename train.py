@@ -8,7 +8,7 @@ def main():
         print("Usage: python train.py <data_path>")
         sys.exit(1)
 
-    model = YOLO("yolo11s.pt")
+    model = YOLO("yolo12m.pt")
     data_path = sys.argv[1]
     results = model.train(
         data=data_path,

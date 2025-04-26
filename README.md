@@ -1,10 +1,10 @@
 # YOLO & PySide
 
-使用 PySide6 构建 UI，部署 ONNX YOLOv11 模型，可轻量化打包，使用 ONNXRuntime 推理。
+使用 PySide6 构建 UI，部署 ONNX YOLO12 模型，可轻量化打包，使用 ONNXRuntime 推理。
 
 ## 特征
 
-本项目为 YOLOv11 参考项目，提供了 训练、推理、导出和 ONNX 模型的部署示例。
+本项目为 YOLO12 参考项目，提供了 训练、推理、导出和 ONNX 模型的部署示例。
 
 更多：
 

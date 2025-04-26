@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>YOLOv11 目标检测</string>
+   <string>YOLO12 目标检测</string>
   </property>
   <property name="windowIcon">
    <iconset resource="../../resources.qrc">

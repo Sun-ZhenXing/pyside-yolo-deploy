@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'main.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.8.2
+## Created by: Qt User Interface Compiler version 6.9.0
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -192,7 +192,7 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"YOLOv11 \u76ee\u6807\u68c0\u6d4b", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"YOLO12 \u76ee\u6807\u68c0\u6d4b", None))
         self.actionExit.setText(QCoreApplication.translate("MainWindow", u"\u9000\u51fa(&X)", None))
         self.actionAboutQt.setText(QCoreApplication.translate("MainWindow", u"\u5173\u4e8e Qt(&Q)", None))
         self.actionSetting.setText(QCoreApplication.translate("MainWindow", u"\u8bbe\u7f6e(&S)", None))
@@ -209,7 +209,7 @@ class Ui_MainWindow(object):
         self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"\u6253\u5f00\u89c6\u9891", None))
         self.pushButton_3.setText(QCoreApplication.translate("MainWindow", u"\u6253\u5f00\u6444\u50cf\u5934", None))
         self.groupBox.setTitle(QCoreApplication.translate("MainWindow", u"\u7f6e\u4fe1\u5ea6\u9608\u503c\uff08conf\uff09", None))
-        self.confLabel.setText(QCoreApplication.translate("MainWindow", u"\u5f53\u524d\u503c\uff1a0.25", None))
+        self.confLabel.setText(QCoreApplication.translate("MainWindow", u"\u7f6e\u4fe1\u5ea6\uff1a0.25", None))
         self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"\u6587\u4ef6(&F)", None))
         self.menuHelp.setTitle(QCoreApplication.translate("MainWindow", u"\u5e2e\u52a9(&H)", None))
         self.menuOption.setTitle(QCoreApplication.translate("MainWindow", u"\u9009\u9879(&O)", None))
