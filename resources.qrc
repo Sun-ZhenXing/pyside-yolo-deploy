@@ -13,5 +13,6 @@
         <file>assets/FluentWrenchScrewdriver24Regular.svg</file>
         <file>assets/icon.ico</file>
         <file>assets/LogosQt.svg</file>
+        <file>assets/qml/main.qml</file>
     </qresource>
 </RCC>
