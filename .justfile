@@ -27,6 +27,9 @@ hooks-run:
 hooks-remove:
   uv run pre-commit uninstall
 
+hooks-update:
+  uv run pre-commit autoupdate
+
 test: hooks-run
 
 designer:

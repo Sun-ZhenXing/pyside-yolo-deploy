@@ -5,7 +5,7 @@ description = "YOLOv12 GUI for PySide6"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "onnxruntime-gpu>=1.21.1",
+    "onnxruntime-gpu>=1.22.0",
     "opencv-python>=4.11.0.86",
     "pyside6>=6.9.0",
     "torch==2.7.0+cu128; sys_platform != 'darwin'",
@@ -48,10 +48,10 @@ explicit = true
 [dependency-groups]
 dev = [
     "ipykernel>=6.29.5",
-    "nuitka>=2.7",
+    "nuitka>=2.7.3",
     "pre-commit>=4.2.0",
     "rust-just>=1.40.0",
     "tensorboard>=2.19.0",
-    "ultralytics>=8.3.127",
-    "wandb>=0.19.10",
+    "ultralytics>=8.3.138",
+    "wandb>=0.19.11",
 ]
