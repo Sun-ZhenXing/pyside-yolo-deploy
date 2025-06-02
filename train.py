@@ -14,9 +14,10 @@ def main():
         data=data_path,
         epochs=100,
         imgsz=640,
-        batch=-1,
         verbose=True,
         plots=True,
+        # multi gpus
+        # device="0,1,2,3",
     )
     print(results)
 

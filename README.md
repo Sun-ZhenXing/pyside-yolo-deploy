@@ -8,16 +8,14 @@
 
 更多：
 
-- [x] [YOLOv8 OBB：训练旋转框检测](./notebook/obb.ipynb)
-- [x] 提供 ONNX 推理示例
-- [ ] 提供 OBB 的 ONNX 推理示例
-- [x] 支持更多平台，包括 Mac OS 和 Ubuntu
+- [ ] 提供 ONNX 推理示例，包括分类、目标检测、分割、旋转框检测
 - [ ] 文档：训练、推理、模型导出
-- [x] 文档：打包部署
+
+更新：目前已经支持视频推理追帧，后续将继续移除 ONNXRuntime 依赖，转移到 NCNN、TensorRT 等专用平台上。
 
 ## 开始
 
-推荐环境：Python 3.11，使用 UV 来管理虚拟环境。
+推荐环境：Python 3.12，使用 UV 来管理虚拟环境。
 
 如果没有安装 UV，请先安装：
 
@@ -60,15 +58,14 @@ just test
 导出 ONNX 模型：
 
 ```bash
-yolo export model=/root/runs/detect/train/weights/best.pt format=onnx simplify=True imgsz=1280 opset=12
+yolo export model=best.pt format=onnx simplify=True imgsz=640 opset=12
 ```
 
 ## 构建可执行程序
 
-使用 Nuitka 编译 Python 代码，Windows 打包：
+使用 Nuitka 编译 Python 代码：
 
 ```bash
-set UPX_PATH=...
 just build
 ```
 
