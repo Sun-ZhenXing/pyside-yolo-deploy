@@ -173,6 +173,13 @@ class MainWindow(QMainWindow):
         )
         if file_name:
             frame = cv2.imread(file_name)
+            if frame is None:
+                QMessageBox.warning(
+                    self,
+                    "错误",
+                    "无法读取图片文件，请检查文件格式。",
+                )
+                return
             frame, *_ = predict(frame, conf=self._conf)
             height, width, _ = frame.shape
             if height > 1280 or width > 720:
@@ -202,7 +209,8 @@ class MainWindow(QMainWindow):
     def openCamera(self) -> None:
         """打开摄像头"""
         self._video_thread.stop()
-        self._video_thread.set_source(0)  # 使用默认摄像头
+        # FIXME: 摄像头索引可能需要根据实际情况调整
+        self._video_thread.set_source(0)
         self._video_thread.start()
 
     @Slot()

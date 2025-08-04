@@ -1,9 +1,4 @@
 @echo off
-if not exist venv (
-    echo Please use venv to create a virtual environment
-    goto :EOF
-)
-
 python -m nuitka --standalone --mingw64 ^
     --plugin-enable=pyside6 ^
     --output-dir=dist ^
