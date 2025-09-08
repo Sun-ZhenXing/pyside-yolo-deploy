@@ -1,6 +1,6 @@
 import numpy as np
 from ultralytics import YOLO
-from ultralytics.models.yolo.detect.predict import Results
+from ultralytics.engine.results import Results
 
 model = YOLO("models/yolo12n.pt")
 
