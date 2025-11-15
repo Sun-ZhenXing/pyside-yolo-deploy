@@ -1,6 +1,6 @@
 import sys
 
-from ultralytics import RTDETR
+from ultralytics.models.rtdetr import RTDETR
 
 
 def main():

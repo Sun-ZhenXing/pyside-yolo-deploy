@@ -1,6 +1,7 @@
 import os
 
 import cv2
+import numpy as np
 
 
 def show_dataset(image_path: str, label_path: str):
@@ -8,9 +9,12 @@ def show_dataset(image_path: str, label_path: str):
         ext = os.path.splitext(file)[1]
         if ext not in [".jpg", ".jpeg", ".png"]:
             continue
-        img = cv2.imread(os.path.join(image_path, file))
+        img: np.ndarray = cv2.imread(os.path.join(image_path, file))  # type: ignore
         img = (
-            cv2.resize(img, (640, int(640 / img.shape[1] * img.shape[0])))
+            cv2.resize(
+                img,
+                (640, int(640 / img.shape[1] * img.shape[0])),
+            )
             if img.shape[1] > 640
             else img
         )
@@ -24,7 +28,13 @@ def show_dataset(image_path: str, label_path: str):
                 y = int((y - h / 2) * img.shape[0])
                 w = int(w * img.shape[1])
                 h = int(h * img.shape[0])
-                cv2.rectangle(img, (x, y), (x + w, y + h), (0, 0, 255), 1)
+                cv2.rectangle(
+                    img,
+                    (x, y),
+                    (x + w, y + h),
+                    (0, 0, 255),
+                    1,
+                )
                 cv2.putText(
                     img,
                     label,

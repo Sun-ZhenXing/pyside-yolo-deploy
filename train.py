@@ -1,6 +1,6 @@
 import sys
 
-from ultralytics import YOLO
+from ultralytics.models.yolo import YOLO
 
 
 def main():
