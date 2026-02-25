@@ -2,7 +2,6 @@
   "recommendations": [
     "ms-python.python",
     "charliermarsh.ruff",
-    "Ultralytics.ultralytics-snippets",
     "fill-labs.dependi"
   ]
 }

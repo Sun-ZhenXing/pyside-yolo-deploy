@@ -2,7 +2,7 @@ import numpy as np
 from ultralytics import YOLO
 from ultralytics.engine.results import Results
 
-model = YOLO("models/yolo12n.pt")
+model = YOLO("models/yolo26n.pt")
 
 
 def predict(img: np.ndarray, conf: float = 0.25) -> tuple[np.ndarray]:

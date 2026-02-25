@@ -1,7 +1,7 @@
 [project]
 name = "pyside-yolo-ui"
 version = "0.1.0"
-description = "YOLOv12 GUI for PySide6"
+description = "YOLO26 GUI for PySide6"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
@@ -54,6 +54,6 @@ dev = [
     "pre-commit>=4.2.0",
     "rust-just>=1.42.4",
     "tensorboard>=2.20.0",
-    "ultralytics>=8.3.174",
+    "ultralytics>=8.4.0",
     "wandb>=0.21.0",
 ]

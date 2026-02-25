@@ -234,5 +234,5 @@ class MainWindow(QMainWindow):
         QMessageBox.about(
             self,
             "关于",
-            "YOLO12 目标检测",
+            "YOLO26 目标检测",
         )
